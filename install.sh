@@ -1,4 +1,4 @@
 #!/bin/bash
 
 dnf -y update
-dnf install -y rustup nmtui
+dnf install -y rustup nmtui cargo
