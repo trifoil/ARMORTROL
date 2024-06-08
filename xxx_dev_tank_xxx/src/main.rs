@@ -5,9 +5,13 @@ fn main() {
     //var declaration and init
     let mut wheel_input = 0.0;
     let mut wheel_input_corrected:f32 = 0.0;
+
     let mut accelerator_input:f32 = 0.0;
     let mut brake_input:f32 = 0.0;
-    let mut reverse__or_not_input:f32 = 0.0;
+    let mut reverse_or_not_input:f32 = 0.0;
+
+    let mut throttle:f32 = 0.0;
+
     let mut left_track_motor:f32 = 0.0;
     let mut right_track_motor:f32 = 0.0;
 
@@ -19,8 +23,9 @@ fn main() {
     println!("{}", wheel_input_corrected);
 
     //zero turn implementation
-    // subroutines::wheel_2_zero_turn_reference(5,6,4,&mut left_track_motor,&mut right_track_motor);
-    // println!("{}", right_track_motor);
+    subroutines::wheel_2_zero_turn_reference(wheel_input_corrected, throttle, &mut left_track_motor,&mut right_track_motor);
+    println!("{}", left_track_motor);
+    println!("{}", right_track_motor);
 }
 
 // A  IMPLEMENTER!!!
