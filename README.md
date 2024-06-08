@@ -18,3 +18,14 @@ wget https://raw.githubusercontent.com/trifoil/python-tank/main/install.sh
 
 python3.12 -m venv pute
 source pute/bin/activate
+
+## Software segmentation
+
+### Function 1 
+Written test
+### Function 2
+Wheel input correction
+Uncorrected wheel input (0 -> 255) -> corrected wheel input (-255 -> 255) 
+### Function 3
+Zero turn 
+corrected wheel input, accelerator input, reverse input -> left_track_motor, right_track_motor
