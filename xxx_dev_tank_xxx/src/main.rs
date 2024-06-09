@@ -6,9 +6,9 @@ fn main() {
     let mut wheel_input:f32 = 130.0;
     let mut wheel_input_corrected:f32 = 0.0;
 
-    let mut accelerator_input:f32 = 0.0;
-    let mut brake_input:f32 = 0.0;
-    let mut reverse_or_not_input:bool = false;
+    let mut accelerator_input:f32 = 200.0;
+    let mut brake_input:f32 = 21.0;
+    let mut reverse_or_not_input:bool = true;
 
     let mut throttle:f32 = 255.0;
 
