@@ -7,6 +7,10 @@ repo for python tank remote testing
 ```
 sudo arm-image-installer  --image=/home/x/Downloads/Fedora-Server-40-1.14.aarch64.raw.xz --target=rock64-rk3328 --media=/dev/sdd --norootpass
 ```
+pour la dépendance avec joystick :
+```
+sudo dnf install -y systemd-devel
+```
 
 ## Get sh installation script
 
