@@ -1,5 +1,5 @@
 mod subroutines;
-
+mod connectivity;
 fn main() {
 
     //var declaration and init
