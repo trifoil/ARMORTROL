@@ -1,7 +1,9 @@
+use gilrs::{Gilrs, Button, Event};
+
 mod subroutines;
 mod connectivity;
 fn main() {
-
+    let mut gilrs = Gilrs::new().unwrap();
     //var declaration and init
     let mut wheel_input:f32 = 130.0;
     let mut wheel_input_corrected:f32 = 0.0;
@@ -40,6 +42,10 @@ fn main() {
     subroutines:: acc_brake_direction_2_throttle(accelerator_input, brake_input, reverse_or_not_input, &mut throttle);
     //zero turn implementation (ok)
     subroutines::wheel_2_zero_turn_reference(wheel_input_corrected, throttle, &mut left_track_motor,&mut right_track_motor);
-    println!("LEFT : {}", left_track_motor);
-    println!("RIGHT : {}", right_track_motor);
+    println!("LEFT : {} RIGHT :{}" , left_track_motor,right_track_motor);
+
+    loop {
+        
+    }
+
 }

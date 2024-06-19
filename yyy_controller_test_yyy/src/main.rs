@@ -17,11 +17,11 @@ fn main() {
             active_gamepad = Some(id);
         }
 
-        // You can also use cached gamepad state
-        if let Some(gamepad) = active_gamepad.map(|id| gilrs.gamepad(id)) {
-            if gamepad.is_pressed(Button::South) {
-                println!("Button South is pressed (XBox - A, PS - X)");
-            }
-        }
+        // // You can also use cached gamepad state
+        // if let Some(gamepad) = active_gamepad.map(|id| gilrs.gamepad(id)) {
+        //     if gamepad.is_pressed(Button::South) {
+        //         println!("Button South is pressed (XBox - A, PS - X)");
+        //     }
+        // }
     }
 }
