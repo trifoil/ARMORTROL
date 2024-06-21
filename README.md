@@ -19,7 +19,18 @@ SBC used :
 * rock64 or better, supporting Fedora Linux
 * other SBC, with Armbian
 
+Informations transferred
+
+* Multiple video flux
+* Multiple audio flux
+* Multiple command flux
+* Multiple feedback flux
+ 
 ## Detailed operation modes description
+
+### Client-Server-Vehicle
+
+### Client-Vehicle (where vehicle has the Server role)
 
 ## Software structure
 
