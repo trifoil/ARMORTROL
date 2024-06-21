@@ -1,1 +1,0 @@
-/home/x/Documents/Github/python-tank/xxx_dev_tank_xxx/target/debug/xxx_dev_tank_xxx: /home/x/Documents/Github/python-tank/xxx_dev_tank_xxx/src/connectivity.rs /home/x/Documents/Github/python-tank/xxx_dev_tank_xxx/src/main.rs /home/x/Documents/Github/python-tank/xxx_dev_tank_xxx/src/subroutines.rs
