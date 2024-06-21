@@ -19,13 +19,25 @@ SBC used :
 * rock64 or better, supporting Fedora Linux
 * other SBC, with Armbian
 
-Informations transferred
+Informations transferred :
 
 * Multiple video flux
 * Multiple audio flux
 * Multiple command flux
 * Multiple feedback flux
- 
+
+User interface :
+
+* ICED
+
+Imputs library :
+
+* 
+
+Other libraries :
+
+*
+
 ## Detailed operation modes description
 
 ### Client-Server-Vehicle
