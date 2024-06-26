@@ -102,5 +102,5 @@ output
 
 ### functions 
 * input_2_tank()
-* input_2car()
+* input_2car() no need
 * unit_2_arduino()

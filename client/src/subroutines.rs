@@ -12,3 +12,9 @@ pub fn input_2_tank(throttle_input:f32,wheel_input:f32,
         *right_output = throttle_input * (-2.0 * wheel_input + 1.0);
     }
 }
+
+pub fn unit_2_arduino(input:f32, output: &mut i32){
+    let temp = (255.0 / 2.0) * (input + 1.0);
+    let temp = temp as i32;
+    *output = temp;
+}
