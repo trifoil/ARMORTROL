@@ -72,6 +72,7 @@ wget https://raw.githubusercontent.com/trifoil/python-tank/main/install.sh
 
 input 
 * accelerator 0 -> +1
+* steering wheel -1 -> +1
 * brake 0/1
 * direction 0/1
 

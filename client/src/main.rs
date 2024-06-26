@@ -7,10 +7,11 @@ fn main() {
     let mut left:f32 = 0.0;
     let mut right:f32 =0.0;
 
+
     //input::input_test();
     subroutines::input_2_tank(thrl, wheel, 
         &mut left, &mut right);
-    
+
     println!("{},{}", left, right);
 }
 
