@@ -67,3 +67,40 @@ sudo dnf install -y systemd-devel
 ```
 wget https://raw.githubusercontent.com/trifoil/python-tank/main/install.sh
 ```
+
+## Subroutines
+
+input 
+* accelerator 0 -> +1
+* brake 0/1
+* direction 0/1
+
+output
+* tank config
+    * throttle left -1 -> +1
+    * throttle right -1 -> +1
+* car config
+    * throttle -1 -> +1
+    * direction -1 -> +1
+
+input 
+* tank config
+    * throttle left -1 -> +1
+    * throttle right -1 -> +1
+* car config
+    * throttle -1 -> +1
+    * direction -1 -> +1
+
+output 
+* tank config
+    * throttle left 0 -> +255
+    * throttle right 0 -> +255
+* car config
+    * throttle 0 -> +255
+    * direction 0 -> +255
+
+
+### functions 
+* input_2_tank()
+* input_2car()
+* unit_2_arduino()
