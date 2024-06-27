@@ -16,9 +16,9 @@ pub fn update(
     while let Some(Event { id, event, time }) = input_system.next_event() {
         match event  {
             EventType::AxisChanged(axis, value, _) => {
-                    if matches!(axis, Axis::LeftStickX) {
-                        *stearing_wheels = value;
-                    }
+                if matches!(axis, Axis::LeftStickX) {
+                    *stearing_wheels = value;
+                }
             },
             EventType::ButtonPressed(button, _) => {
                 if matches!(button, Button::East) {
