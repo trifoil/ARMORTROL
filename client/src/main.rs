@@ -1,4 +1,4 @@
-mod connectivity;
+mod inputs;
 mod subroutines;
 
 fn main() {
@@ -10,7 +10,7 @@ fn main() {
     let mut is_going_forward: bool = false;
 
     // input system, used in the loop
-    let mut input_system = connectivity::setup();
+    let mut input_system = inputs::setup();
 
     let thrl:f32 = 1.0;
     let wheel:f32 = 0.75;
@@ -28,7 +28,7 @@ fn main() {
 
     loop {
         // update inputs values
-        input_system = connectivity::update(
+        input_system = inputs::update(
             input_system,
             &mut accelerator,
             &mut stearing_wheels,
