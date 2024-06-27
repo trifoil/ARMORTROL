@@ -12,19 +12,9 @@ fn main() {
     // input system, used in the loop
     let mut input_system = inputs::setup();
 
-    let thrl:f32 = 1.0;
-    let wheel:f32 = 0.75;
+    // output variables
     let mut left:f32 = 0.0;
-    let mut right:f32 =0.0;
-
-
-    //input::input_test();
-    subroutines::input_2_tank(thrl, wheel, 
-        &mut left, &mut right);
-
-    println!("{},{}", left, right);
-
-    
+    let mut right:f32 =0.0;    
 
     loop {
         // update inputs values
@@ -35,8 +25,12 @@ fn main() {
             &mut is_using_break,
             &mut is_going_forward
         );
+        
+        subroutines::input_2_tank(accelerator, stearing_wheels,
+            &mut left, &mut right);
+
         // Test for trifoil:
-        // println!("accelerator: {}, stearing_wheels: {}, is_using_break: {}, is_going_forward: {}", accelerator, stearing_wheels, is_using_break, is_going_forward);
+        // println!("left: {}, right: {}, is_using_break: {}, is_going_forward: {}", left, right, is_using_break, is_going_forward);
     }
 }
 
