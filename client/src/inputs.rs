@@ -9,7 +9,7 @@ pub fn update(
     mut input_system: Gilrs,
     accelerator: &mut f32,
     stearing_wheels: &mut f32,
-    is_using_break: &mut bool,
+    is_using_brake: &mut bool,
     is_going_forward: &mut bool
 ) -> Gilrs {
 
@@ -27,7 +27,7 @@ pub fn update(
             },
             EventType::ButtonChanged(button, value, _) => {
                 if matches!(button, Button::LeftTrigger2) {
-                    *is_using_break = value >= 0.20;
+                    *is_using_brake = value >= 0.20;
                 } else if matches!(button, Button::RightTrigger2) {
                     *accelerator = value;
                 }

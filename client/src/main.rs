@@ -6,7 +6,7 @@ fn main() {
     // inputs variables
     let mut accelerator: f32 = 0.0;
     let mut stearing_wheels: f32 = 0.0;
-    let mut is_using_break: bool = false;
+    let mut is_using_brake: bool = false;
     let mut is_going_forward: bool = false;
 
     // input system, used in the loop
@@ -22,7 +22,7 @@ fn main() {
             input_system,
             &mut accelerator,
             &mut stearing_wheels,
-            &mut is_using_break,
+            &mut is_using_brake,
             &mut is_going_forward
         );
         
