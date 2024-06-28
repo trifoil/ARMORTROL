@@ -8,7 +8,7 @@ pub fn setup() -> Gilrs {
 pub fn update(
     mut input_system: Gilrs,
     accelerator: &mut f32,
-    stearing_wheels: &mut f32,
+    steering_wheel: &mut f32,
     is_using_brake: &mut bool,
     is_going_forward: &mut bool
 ) -> Gilrs {
@@ -17,7 +17,7 @@ pub fn update(
         match event  {
             EventType::AxisChanged(axis, value, _) => {
                 if matches!(axis, Axis::LeftStickX) {
-                    *stearing_wheels = value;
+                    *steering_wheel = value;
                 }
             },
             EventType::ButtonPressed(button, _) => {
