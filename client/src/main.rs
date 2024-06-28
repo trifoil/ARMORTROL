@@ -2,6 +2,9 @@ use clap::{Parser, ValueEnum};
 
 mod inputs;
 mod subroutines;
+mod config;
+mod networking;
+
 
 #[derive(Parser)]
 #[command(name = "MyApp")]
@@ -33,7 +36,7 @@ fn main() {
             println!("Client Mode");
                 // inputs variables
             let mut accelerator: f32 = 0.0;
-            let mut stearing_wheels: f32 = 0.0;
+            let mut steering_wheels: f32 = 0.0;
             let mut is_using_brake: bool = false;
             let mut is_going_forward: bool = false;
 
@@ -49,12 +52,12 @@ fn main() {
                 input_system = inputs::update(
                     input_system,
                     &mut accelerator,
-                    &mut stearing_wheels,
+                    &mut steering_wheels,
                     &mut is_using_brake,
                     &mut is_going_forward
                 );
                 
-                subroutines::input_2_tank(accelerator, stearing_wheels,
+                subroutines::input_2_tank(accelerator, steering_wheels,
                     &mut left, &mut right);
 
                 // Test for trifoil:
