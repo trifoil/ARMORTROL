@@ -114,3 +114,13 @@ output
 ### networking
 ### subroutines 
 ### 
+
+## Sources
+https://github.com/dionysus-oss/netrusting
+https://docs.rs/clap/latest/clap/_derive/_tutorial/index.html#modules
+https://www.youtube.com/playlist?list=PL5E0b3rgRMdpDBdw56w7tNSZgVt2dysNF
+https://leafheap.com/articles/iced-tutorial-version-0-12
+
+Rocket M5 M2
+https://store.ui.com/us/en/pro/category/all-wireless/products/rocketm2
+

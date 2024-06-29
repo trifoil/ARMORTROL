@@ -32,6 +32,6 @@ pub fn run() {
             &mut left, &mut right);
 
         // Test for trifoil:
-        // println!("left: {}, right: {}, is_using_brake: {}, is_going_forward: {}", left, right, is_using_brake, is_going_forward);
+        println!("left: {}, right: {}, is_using_brake: {}, is_going_forward: {}", left, right, is_using_brake, is_going_forward);
     }
 }
