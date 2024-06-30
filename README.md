@@ -62,6 +62,12 @@ pour la dépendance avec joystick :
 sudo dnf install -y systemd-devel
 ```
 
+pour la camera
+```
+sudo dnf install libxkbcommon-devel
+sudo dnf install libv4l-devel
+```
+
 ## Get sh installation script
 
 ```
