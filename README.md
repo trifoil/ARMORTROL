@@ -137,3 +137,17 @@ https://store.ui.com/us/en/pro/category/all-wireless/products/rocketm2
 opencv
 https://www.youtube.com/watch?v=zcfixnuJFXg
 https://gist.github.com/rajeshpachaikani/949652fe9fac4b246d68fd3f301019df
+
+
+
+
+
+## Dependances bizarres
+sudo dnf install libQt5Core.so.5
+sudo dnf install libQt5Gui.so.5
+
+
+
+a l'air pas mal
+
+https://lib.rs/crates/tokio-linux-video
