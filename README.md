@@ -133,3 +133,7 @@ https://leafheap.com/articles/iced-tutorial-version-0-12
 Rocket M5 M2
 https://store.ui.com/us/en/pro/category/all-wireless/products/rocketm2
 
+
+opencv
+https://www.youtube.com/watch?v=zcfixnuJFXg
+https://gist.github.com/rajeshpachaikani/949652fe9fac4b246d68fd3f301019df
