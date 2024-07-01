@@ -66,6 +66,9 @@ pour la camera
 ```
 sudo dnf install libxkbcommon-devel
 sudo dnf install libv4l-devel
+
+
+sudo dnf install opencv-devel
 ```
 
 ## Get sh installation script
