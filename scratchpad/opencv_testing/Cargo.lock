@@ -134,7 +134,6 @@ dependencies = [
 name = "opencv_testing"
 version = "0.1.0"
 dependencies = [
- "clang-sys",
  "opencv",
 ]
 
