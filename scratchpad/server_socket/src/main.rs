@@ -51,7 +51,7 @@ fn handle_client(mut stream: TcpStream) {
         match stream.read(&mut buffer) {
             Ok(0) => {
                 // Connection was closed by the client
-                println!("Connection closed by client.");
+                //println!("Connection closed by client.");
                 break;
             }
             Ok(bytes_read) => {

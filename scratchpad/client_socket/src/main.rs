@@ -4,14 +4,9 @@ use std::net::TcpStream;
 pub fn run(host: &String, port: &u16) -> Result<(), String> {
     let addr = format!("{}:{}", host, port);
 
-    let mut i = 0;
-    let mut client = TcpStream::connect(addr.as_str()).map_err(|_| format!("failed to connect to {}", addr))?;
-    client.write("hello, TCP\n".as_bytes()).map_err(|_| format!("failed to send"))?;
-
-    while i < 3 {
+    loop {
         let mut client = TcpStream::connect(addr.as_str()).map_err(|_| format!("failed to connect to {}", addr))?;
-        client.write("hello, TCP\n".as_bytes()).map_err(|_| format!("failed to send"))?;
-        i+=1;
+        client.write("blah".as_bytes()).map_err(|_| format!("failed to send"))?;
     }
     Ok(())
 }
