@@ -1,40 +1,51 @@
+use std::io::Write;
 use std::net::TcpStream;
-use std::io::{Read, stdout, Write};
-use std::net::TcpListener;
+use std::time::Duration;
+use std::thread;
 
-
-pub fn run_client(host: &String, port: &u16) -> Result<(), String> {
+pub fn connect_to_server(host: &String, port: &u16) -> Result<TcpStream, String> {
     let addr = format!("{}:{}", host, port);
-    let mut client = TcpStream::connect(addr.as_str()).map_err(|_| format!("failed to connect to {}", addr))?;
 
-    client.write("hello, TCP".as_bytes()).map_err(|_| format!("failed to send"))?;
-
-    Ok(())
-}
-
-pub fn run_serve(bind_host: &String, port: &u16) -> Result<(), String> {
-    let addr = format!("{}:{}", bind_host, port);
-    let listener = TcpListener::bind(addr.clone()).map_err(|_| format!("Failed to bind to {}", addr))?;
-
-    for stream in listener.incoming() {
-        match stream {
-            Ok(mut s) => {
-                println!("Connection accepted");
-
-                let mut buf = [0; 128];
-                let mut read_bytes = 0;
-                while read_bytes == 0 {
-                    read_bytes = s.read(&mut buf).map_err(|_| "failed to read from socket")?;
-                    println!("received bytes {}", read_bytes);
-                }
-                stdout().write(&buf[0..read_bytes]).map_err(|_| "failed to write to stdout")?;
-                stdout().flush().unwrap();
-            }
-            Err(e) => {
-                println!("Error while accepting incoming connection - {}", e);
+    loop {
+        match TcpStream::connect(&addr) {
+            Ok(stream) => return Ok(stream),
+            Err(_) => {
+                println!("Failed to connect to {}. Retrying in 5 seconds...", addr);
+                thread::sleep(Duration::from_secs(5));
             }
         }
     }
+}
 
+pub fn send_data(stream: &mut TcpStream, message: &String) -> Result<(), String> {
+    stream.write(message.as_bytes()).map_err(|_| format!("failed to send"))?;
     Ok(())
 }
+
+
+// use std::io::Write;
+// use std::net::TcpStream;
+
+// pub fn run(host: &String, port: &u16, message: &String) -> Result<(), String> {
+//     let addr = format!("{}:{}", host, port);
+
+//     let mut client = TcpStream::connect(addr.as_str()).map_err(|_| format!("failed to connect to {}", addr))?;
+//     client.write(message.as_bytes()).map_err(|_| format!("failed to send"))?;
+    
+//     Ok(())
+// }
+
+// pub fn connect(host: &String, port: &u16) -> Result<TcpStream, String> {
+//     let addr = format!("{}:{}", host, port);
+//     TcpStream::connect(addr.as_str()).map_err(|_| format!("failed to connect to {}", addr))
+// }
+
+// pub fn write_message(mut client: TcpStream, message: &String) -> Result<(), String> {
+//     client.write(message.as_bytes()).map_err(|_| format!("failed to send"))?;
+//     Ok(())
+// }
+
+// pub fn run(host: &String, port: &u16, message: &String) -> Result<(), String> {
+//     let client = connect(host, port)?;
+//     write_message(client, message)
+// }
